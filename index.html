@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  	<title>Frontend Mentor | Equalizer landing page</title>
+  	
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+	
+		div.premiumEQ {
+			position:relative; /* for positioning of the buttons */
+			background-color:#FA7553;
+			border-radius:12px;
+			width: 375px;
+			height: 546px;
+/*			border:0px solid green;*/
+		}
+		div.premiumEQ > h2 {
+			padding:56px 0px 24px 36px;
+			margin:0px;
+			font-family: 'IBM Plex Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 40px;
+			color: #FCFAF9;
+/*			border:1px solid red;*/
+		}
+		div.premiumEQ p {
+			font-family: 'IBM Plex Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 28px;
+			color: #FCFAF9;
+			margin:0px 36px 30px 36px;
+		}
+		div.price {
+			display:flex;
+			align-items:flex-start;
+			align-content:center;
+			height: 100px;
+/*			justify-content: center;*/
+			border:1px solid green;
+		}
+		div.price > p.large {
+			font-family: 'IBM Plex Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 52px;
+			padding-left:4px;
+			margin-top:10px;
+			border:1px solid blue;
+/*			line-height: 52px;*/
+		}
+		button.iosdownload {
+			position: absolute;
+			width: 296px;
+			height: 61px;
+			bottom:125px;
+			left:42px;
+			background: #191826;
+			border-radius: 12px;
+			font-family: 'IBM Plex Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 32px;
+			text-align: center;
+			letter-spacing: -0.18px;
+			color: #FCFAF9;
+		}
+		
+		button.androiddownload {
+			position: absolute;
+			width: 296px;
+			height: 61px;
+			bottom:48px;
+			left:44px;
+			background: #FCFAF9;
+			border-radius: 12px;
+			border:none;
+			font-family: 'IBM Plex Sans';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 32px;
+			text-align: center;
+			letter-spacing: -0.18px;
+
+			color: #191826;	
+		}
+		img.icon {
+			margin-right:10px;
+		}
+	
+	</style>
+	
+	
+</head>
+<body>
+	<div class="background">
+		<header>
+			<p class="equalizer">equalizer</p>
+			<h1 class="slogan" > We make your music sound extraordinary.</h1>
+			<p class="slgdescription">A system audio equalizer specifically designed for Android and iOS. Freely tune the 
+  				way your music sounds with a professional grade parametric EQ & volume mixer. Control 
+  				bass, mids, treble, gain control, reverb, and more!
+			</p>
+			<div class="logo">
+				<!-- Backgroundimage via css -->
+			</div>
+		</header>
+
+		<main>
+			
+			
+			<div class="premiumEQ">
+				<h2>Premium EQ</h2>
+				<p class="premdescription">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
+  					your listening experience to a whole new level and access all our incredible features!
+				</p>
+				<div class="price">
+					<p class="large">$4</p>
+					<p class="small">/ month</p>
+				</div>
+				<button class="iosdownload"><img class="icon" src="assets/icon-apple.svg" alt="Icon der Marke Apple">iOS Download</button>
+				<button class="androiddownload"><img class="icon" src="assets/icon-android.svg" alt="Icon der Marke Android">Android Download</button>
+
+			</div>
+
+		</main>
+
+		<footer>
+
+
+		</footer>
+
+	</div>	
+ 
+
+  A system audio equalizer specifically designed for Android and iOS. Freely tune the 
+  way your music sounds with a professional grade parametric EQ & volume mixer. Control 
+  bass, mids, treble, gain control, reverb, and more!
+
+  Premium EQ
+
+  Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
+  your listening experience to a whole new level and access all our incredible features!
+
+  $4 / month
+
+  iOS Download
+  Android Download
+
+  All rights reserved © Equalizer 2021
+  Have any problems? Contact us via social media or email us at equalizer@example.com
+
+</body>
+</html>
+
+
+/* Group 3 */
+
+position: absolute;
+width: 165px;
+height: 52px;
+left: 42px;
+top: 1278px;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 165px;
+height: 52px;
+left: 42px;
+top: 1278px;
+
+
+
+/* $4 */
+
+position: absolute;
+height: 52px;
+left: 0%;
+right: 52.12%;
+top: calc(50% - 52px/2);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 65px;
+line-height: 52px;
+/* identical to box height, or 80% */
+
+color: #FCFAF9;
+
+
+
+/* / month */
+
+position: absolute;
+height: 32px;
+left: 57.58%;
+right: 0%;
+top: calc(50% - 32px/2 - 1px);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+letter-spacing: -0.2px;
+
+color: #FCFAF9;
+
+
+
+
+
+
+
+
+
+/* Get expert-level con */
+
+position: absolute;
+width: 302px;
+height: 140px;
+left: 36px;
+top: 1102px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+color: #FCFAF9;
+
+
+
+
+
+/* Group 9 */
+
+position: absolute;
+width: 296px;
+height: 61px;
+left: 42px;
+top: 1362px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 296px;
+height: 61px;
+left: 42px;
+top: 1362px;
+
+background: #191826;
+border-radius: 12px;
+
+
+/* Group 4 */
+
+position: absolute;
+width: 142px;
+height: 32px;
+left: 119px;
+top: 1377px;
+
+
+
+/* iOS Download */
+
+position: absolute;
+height: 32px;
+left: 17.61%;
+right: 0%;
+top: calc(50% - 32px/2);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 32px;
+/* identical to box height, or 178% */
+text-align: center;
+letter-spacing: -0.18px;
+
+color: #FCFAF9;
+
+
+
+/* Combined Shape */
+
+position: absolute;
+left: 0%;
+right: 87.97%;
+top: 18.75%;
+bottom: 18.75%;
+
+background: #FCFAF9;
+
+
+/* Path */
+
+position: absolute;
+left: 5.78%;
+right: 91.32%;
+top: 18.75%;
+bottom: 66.21%;
+
+background: #000000;
+
+
+/* Path */
+
+position: absolute;
+left: 0%;
+right: 87.97%;
+top: 33.38%;
+bottom: 18.75%;
+
+background: #000000;
+
+
+
+
+
+
+
+
+/* Group 5 */
+
+position: absolute;
+width: 296px;
+height: 61px;
+left: 42px;
+top: 1439px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 296px;
+height: 61px;
+left: 42px;
+top: 1439px;
+
+background: #FCFAF9;
+border-radius: 12px;
+
+
+/* Group 4 */
+
+position: absolute;
+width: 178.5px;
+height: 32px;
+left: 101px;
+top: 1454px;
+
+
+
+/* Android Download */
+
+position: absolute;
+height: 32px;
+left: 13.73%;
+right: -0.56%;
+top: calc(50% - 32px/2);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 32px;
+/* identical to box height, or 178% */
+text-align: center;
+letter-spacing: -0.18px;
+
+color: #191826;
+
+
+
+/* Combined Shape */
+
+position: absolute;
+left: 0%;
+right: 90.64%;
+top: 21.88%;
+bottom: 15.62%;
+
+background: #191826;
+
+
+/* XMLID_221_ */
+
+position: absolute;
+left: 1.87%;
+right: 92.51%;
+top: 42.62%;
+bottom: 15.62%;
+
+background: #000000;
+
+
+/* XMLID_222_ */
+
+position: absolute;
+left: 7.95%;
+right: 90.64%;
+top: 42.62%;
+bottom: 31.29%;
+
+background: #000000;
+
+
+/* XMLID_223_ */
+
+position: absolute;
+left: 0%;
+right: 98.6%;
+top: 42.62%;
+bottom: 31.29%;
+
+background: #000000;
+
+
+/* XMLID_224_ */
+
+position: absolute;
+left: 1.87%;
+right: 92.51%;
+top: 21.88%;
+bottom: 59.99%;
+
+background: #000000;
+
+
+/* XMLID_224_-path */
+
+position: absolute;
+left: 1.87%;
+right: 92.51%;
+top: 21.88%;
+bottom: 59.99%;
+
+
+
+/* XMLID_224_-path */
+
+position: absolute;
+left: 3.16%;
+right: 96.14%;
+top: 31.53%;
+bottom: 64.56%;
+
+
+
+/* XMLID_224_-path */
+
+position: absolute;
+left: 5.5%;
+right: 93.8%;
+top: 31.53%;
+bottom: 64.56%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 165px;
+height: 52px;
+left: 42px;
+top: 1278px;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 165px;
+height: 52px;
+left: 42px;
+top: 1278px;
+
+
+
+/* $4 */
+
+position: absolute;
+height: 52px;
+left: 0%;
+right: 52.12%;
+top: calc(50% - 52px/2);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 65px;
+line-height: 52px;
+/* identical to box height, or 80% */
+
+color: #FCFAF9;
+
+
+
+/* / month */
+
+position: absolute;
+height: 32px;
+left: 57.58%;
+right: 0%;
+top: calc(50% - 32px/2 - 1px);
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+letter-spacing: -0.2px;
+
+color: #FCFAF9;
+
