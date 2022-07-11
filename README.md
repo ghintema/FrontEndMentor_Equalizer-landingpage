@@ -1,0 +1,2 @@
+# FrontEndMentor_Equalizer-landingpage
+ 
