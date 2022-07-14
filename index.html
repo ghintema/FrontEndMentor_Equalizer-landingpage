@@ -45,9 +45,9 @@
 			filter: blur(135.914px);
 		}
 		header * {
-			margin:var(--white-space-left);
+			margin-left:var(--white-space-left);
 		}
-		p.equalizer {
+		p.equalizer, p.equalizertop {
 			color: #191826;
 			font-family: 'IBM Plex Sans';
 			font-style:normal;
@@ -199,7 +199,7 @@
 		footer {
 			margin:var(--white-space-left);
 		}
-		div.disclaimer > p.disclaimertext {
+		p.disclaimertext {
 			font-family: 'IBM Plex Sans';
 			font-style: normal;
 			font-weight: 400;
@@ -207,10 +207,10 @@
 			line-height: 26px;
 			color: #191826;
 		}
-		div.icons {
+		.icons {
 			display:flex;
-			justify-content:space-around;
-			width:120px;
+			justify-content:space-between;
+			width:100px;
 			height:20px;
 			margin-top:62px;
 			margin-bottom:75px;
@@ -218,6 +218,9 @@
 		}
 
 		@media (min-width:762px) {
+			:root {
+			--white-space-left:40px;
+			}
 			div.background {
 			margin: 0px auto;
 			width:762px; 
@@ -279,19 +282,138 @@
 				margin:auto;
 			}
 			div.black > img.logo1{
-				width:280px; /* Figma */
+				width:280px;
 				height:420px;
-				margin-left:calc((696px - 280px) / 2)
+				margin-top:-32px; /* 70 - 38 */
+				margin-right:187px;
+				margin-left:229px; /* 696 (div.black) - 280 (img.logo1) - 183 (margin-right) */
 			}
 			div.black > img.mobil {
 				height:556px;
+				width:270px;
 				position:absolute;
 				left:64px;
 				top:-138px; /* Figma */
 			}
+
+			div.premiumEQ {
+				position:relative; /* for positioning of the buttons */
+				background-color:#FA7553;
+				border-radius:12px;
+				width: 399px;
+				height: 546px;
+				margin-top: -450px;
+				margin-left:272px; /* margin to div.background */
+			}
+			div.premiumEQ > h2 {
+				padding:56px 0px 24px 48px;
+				margin:0px;
+				font-family: 'IBM Plex Sans';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 40px;
+				color: #FCFAF9;
+	/*			border:1px solid red;*/
+		}
+			div.premiumEQ p.premdescription {
+				font-family: 'IBM Plex Sans';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 28px;
+				color: #FCFAF9;
+				margin:0px 48px 0px 48px;
+			}
+			footer {
+				display:flex;
+				flex-flow:wrap;
+				
+			}	
+			p.equalizer {
+				width:100%;
+				margin:0px 0px 50px 0px
+			}
+			p.disclaimertext{
+				width:366px;
+				height:auto;
+				padding:0px;
+				margin:0px;
+			}
+			div.icons {
+				margin-top:40px;
+				margin-left:215px;
+				/* border:1px solid red;  */
+
+			}
 		
 		}
 
+		@media (min-width:1440px) {
+			:root {
+			--white-space-left:165px;
+			}
+			div.background {
+				margin: 0px auto;
+				width:1440px; 
+				background-color:white;
+				border:1px solid rosybrown;
+				overflow: hidden;
+				position:relative;
+			}
+			div.black{
+				border-radius: 12px;
+				width:1100px;
+				margin:auto;
+			}
+			div.black > img.logo1{
+				width:312px;
+				height:468px;
+				margin-top:-32px; /* 70 - 38 */
+				margin-right:462px;
+				margin-left:335px; /* 696 (div.black) - 280 (img.logo1) - 183 (margin-right) */
+			}
+			div.black > img.mobil {
+				height:642px;
+				width:312px;
+				position:absolute;
+				left:102px;
+				top:-215px; /* Figma */
+			}
+			div.premiumEQ {
+				position:relative; /* for positioning of the buttons */
+				background-color:#FA7553;
+				border-radius:12px;
+				width: 446px;
+				height: 626px;
+				
+				margin-top: -513px;
+				margin-left:733px; /* 165px + 568px margin to div.background */
+				}
+
+			div.premiumEQ > h2 {
+				padding:56px 0px 24px 54px;
+				margin:0px;
+				font-family: 'IBM Plex Sans';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 40px;
+				line-height: 52px;
+				color: #FCFAF9;
+	/*			border:1px solid red;*/
+				}
+			div.premiumEQ p.premdescription {
+				font-family: 'IBM Plex Sans';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 34px;
+				color: #FCFAF9;
+				margin:0px 58px 0px 54px;
+			}
+				
+				
+		}
 	</style>
 	
 	
@@ -302,7 +424,7 @@
 		<div class="blur2"></div>
 		<div class="blur3"></div>
 		<header>
-			<p class="equalizer">equalizer</p>
+			<p class="equalizertop">equalizer</p>
 			<img class="logotop" alt="Logo der Marke equalizer oben rechts">
 			<h1 class="slogan" > We make your music sound extraordinary.</h1>
 			<p class="slgdescription">A system audio equalizer specifically designed for Android and iOS. Freely tune the 
@@ -337,11 +459,10 @@
 		</main>
 
 		<footer>
-			<div class="disclaimer">
-				<p class="equalizer">equalizer</p>
-				<p class="disclaimertext">All rights reserved © Equalizer 2021
-					Have any problems? Contact us via social media or email us at <strong>equalizer@example.com</strong></p>
-			</div>
+			
+			<p class="equalizer">equalizer</p>
+			<p class="disclaimertext">All rights reserved © Equalizer 2021 <br> Have any problems? Contact us via social media or email us at <strong>equalizer@example.com</strong></p>
+		
 			<div class="icons">
 				<img class="facebook" src="assets/icon-facebook.svg" alt="icon der Marke Facebook">
 				<img class="facebook" src="assets/icon-instagram.svg" alt="icon der Marke Instagram">
@@ -354,123 +475,94 @@
  
 
 	
-	/* Group 2 */
+	/* Get expert-level con */
 
 position: absolute;
-width: 281.4px;
-height: 480px;
-left: 159px;
-top: -104px;
+width: 333px;
+height: 170px;
+left: 788px;
+top: 1082px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 34px;
+/* or 170% */
+
+color: #FCFAF9;
 
 
 
-/* Oval */
-
-position: absolute;
-width: 281.4px;
-height: 281.4px;
-left: 159px;
-top: -104px;
-
-background: #40FFF6;
-mix-blend-mode: normal;
-opacity: 0.28;
-filter: blur(135.914px);
-
-
-/* Oval Copy */
+/* Get expert-level con */
 
 position: absolute;
-width: 281.4px;
-height: 281.4px;
-left: 159px;
-top: 94.6px;
+width: 302px;
+height: 140px;
+left: 320px;
+top: 1020px;
 
-background: #FF9201;
-mix-blend-mode: normal;
-opacity: 0.15;
-filter: blur(135.914px);
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
 
+color: #FCFAF9;
 
-
-
-/* Oval Copy 2 */
-
-position: absolute;
-width: 384px;
-height: 384px;
-left: -254px;
-top: -112px;
-
-background: #FF7B40;
-mix-blend-mode: normal;
-opacity: 0.15;
-filter: blur(135.914px);
-/* We make your music s */
+/* Premium EQ */
 
 position: absolute;
-width: 520px;
-height: 192px;
-left: 39px;
-top: 189px;
+width: 302px;
+height: 40px;
+left: 320px;
+top: 968px;
 
 font-family: 'IBM Plex Sans';
 font-style: normal;
 font-weight: 700;
-font-size: 64px;
-line-height: 64px;
-/* or 100% */
-letter-spacing: -0.727273px;
+font-size: 32px;
+line-height: 40px;
+/* identical to box height, or 125% */
 
-color: #191826;
-
-/* Group 2 */
-
-position: absolute;
-width: 983px;
-height: 808px;
-left: -254px;
-top: -112px;
+color: #FCFAF9;
 
 
 
-/* Oval Copy 2 */
+
+
+/* Premium EQ */
 
 position: absolute;
-width: 384px;
-height: 384px;
-left: -254px;
-top: -112px;
+width: 333px;
+height: 52px;
+left: 788px;
+top: 1008px;
 
-background: #FF7B40;
-mix-blend-mode: normal;
-opacity: 0.15;
-filter: blur(135.914px);
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 52px;
+/* identical to box height, or 130% */
 
+color: #FCFAF9;
 
-/* Oval */
-
-position: absolute;
-width: 384px;
-height: 384px;
-left: 345px;
-top: 41px;
-
-background: #40FFF6;
-mix-blend-mode: normal;
-opacity: 0.28;
-filter: blur(135.914px);
-
-
-/* Oval Copy */
+/* Get expert-level con */
 
 position: absolute;
-width: 384px;
-height: 384px;
-left: 345px;
-top: 312px;
+width: 302px;
+height: 140px;
+left: 320px;
+top: 1020px;
 
-background: #FF9201;
-mix-blend-mode: normal;
-opacity: 0.15;
-filter: blur(135.914px);
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+color: #FCFAF9;
+
