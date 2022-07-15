@@ -18,7 +18,6 @@
 			margin: 0px auto;
 			width:375px; 
 			background-color:white;
-			border:1px solid rosybrown;
 			overflow: hidden;
 			position:relative;
 		}
@@ -46,14 +45,13 @@
 		}
 		header * {
 			margin-left:var(--white-space-left);
+			position:relative;
 		}
-		p.equalizer, p.equalizertop {
-			color: #191826;
-			font-family: 'IBM Plex Sans';
-			font-style:normal;
-			font-weight:bolder;
-			font-size: 26px;
-			margin-bottom:76px
+		img#equalizerimgtop {
+			width:146px;
+			margin-top:40px;
+			margin-bottom:76px;
+				
 		}
 		img.logotop{
 			visibility: hidden; /* to surpress apperence of alt-text */
@@ -66,6 +64,7 @@
 			line-height: 48px;
 			letter-spacing: -0.454545px;
 			color: #191826;
+			margin-top:0px; /* because p.equalizertop has margin-bottom:76px; */
 		}
 		p.slgdescription {
 			width:327px; /* Figma */
@@ -114,7 +113,7 @@
 			font-size: 32px;
 			line-height: 40px;
 			color: #FCFAF9;
-/*			border:1px solid red;*/
+
 		}
 		div.premiumEQ p.premdescription {
 			font-family: 'IBM Plex Sans';
@@ -137,8 +136,6 @@
 			color: #FCFAF9;
 			padding-left:4px;
 			margin:auto 6px auto 44px;
-			/* border:1px solid blue; */
-/*			line-height: 52px;*/
 		}
 		div.price > p.small {
 			font-family: 'IBM Plex Sans';
@@ -199,6 +196,10 @@
 		footer {
 			margin:var(--white-space-left);
 		}
+		footer img#equalizerimgbottom {
+			background-color: red;
+			margin:26px 0px 76px;
+		}
 		p.disclaimertext {
 			width:327px;
 			font-family: 'IBM Plex Sans';
@@ -226,7 +227,6 @@
 			margin: 0px auto;
 			width:762px; 
 			background-color:white;
-			border:1px solid rosybrown;
 			overflow: hidden;
 			position:relative;
 			}
@@ -242,16 +242,7 @@
 				opacity: 0.15;
 				filter: blur(135.914px);
 			}
-			p.equalizer {
-			color: #191826;
-			font-family: 'IBM Plex Sans';
-			font-style:normal;
-			font-weight:bolder;
-			font-size: 26px;
-			margin-top:60px;
-			margin-bottom:95px;
 			
-			}
 			img.logotop{
 				visibility: visible;
 				content: url("assets/bg-pattern-1.svg");
@@ -260,6 +251,15 @@
 				right:-33px;
 				margin:0px;
 				top:-32px;
+			}
+
+			img#equalizerimgtop{
+				margin-top:62px;
+				margin-bottom:95px;
+			}
+			p.equalizertop {
+				margin-top:62px;
+				margin-bottom:93px;
 			}
 			h1.slogan{
 				font-family: 'IBM Plex Sans';
@@ -274,7 +274,8 @@
 				
 			}
 			p.slgdescription {
-				width:514px;
+				width:505px; /* Actually 514px, but that doesn't give the correct brake */
+				margin-bottom:256px
 			}
 			
 			div.black{
@@ -315,7 +316,6 @@
 				font-size: 32px;
 				line-height: 40px;
 				color: #FCFAF9;
-	/*			border:1px solid red;*/
 		}
 			div.premiumEQ p.premdescription {
 				font-family: 'IBM Plex Sans';
@@ -331,12 +331,16 @@
 			width: 296px;
 			height: 61px;
 			left:54px;	
-
+			}
 			footer {
 				display:flex;
-				flex-flow:wrap;
-				
+				flex-wrap:wrap;
 			}	
+
+			img#equalizerimgbottom{
+				width:146px;
+				margin:0px 0px 50px 0px;
+			}
 			p.equalizer {
 				width:100%;
 				margin:0px 0px 50px 0px
@@ -350,9 +354,6 @@
 			div.icons {
 				margin-top:40px;
 				margin-left:215px;
-				/* border:1px solid red;  */
-
-			}
 		
 		}
 
@@ -364,7 +365,6 @@
 				margin: 0px auto;
 				width:1440px; 
 				background-color:white;
-				border:1px solid rosybrown;
 				overflow: hidden;
 				position:relative;
 			}
@@ -376,6 +376,12 @@
 				right:-0px;
 				margin:0px;
 				top:-32px;
+			}
+			
+			img#equalizerimgtop{
+				margin-top:62px;
+				margin-bottom:140px;
+			
 			}
 			h1.slogan{
 				font-family: 'IBM Plex Sans';
@@ -398,6 +404,7 @@
 
 				color: #191826;
 				width:825px;
+				margin-bottom:320px;
 			}
 			div.black{
 				border-radius: 12px;
@@ -458,8 +465,12 @@
 			}
 			footer {
 				display:flex;
-				flex-flow:wrap;
+				flex-wrap:wrap;
 			}	
+			img#equalizerimgbottom{
+				width:146px;
+				margin:0px 0px 50px 0px;
+			}
 			p.equalizer {
 				width:146px;
 				margin:0px 0px 50px 0px
@@ -473,8 +484,6 @@
 			div.icons {
 				margin-top:40px;
 				margin-left:215px;
-				/* border:1px solid red;  */
-
 			}
 		}
 	</style>
@@ -487,12 +496,12 @@
 		<div class="blur2"></div>
 		<div class="blur3"></div>
 		<header>
-			<p class="equalizertop">equalizer</p>
+			<img id="equalizerimgtop" src="assets/logo.svg" alt="Logo der Marke equalizer">
 			<img class="logotop" alt="Logo der Marke equalizer oben rechts">
 			<h1 class="slogan" > We make your music sound extraordinary.</h1>
 			<p class="slgdescription">A system audio equalizer specifically designed for Android and iOS. Freely tune the 
-  				way your music sounds with a professional grade parametric EQ & volume mixer. Control 
-  				bass, mids, treble, gain control, reverb, and more!
+				way your music sounds with a professional grade parametric EQ & volume mixer. Control 
+				bass, mids, treble, gain control, reverb, and more!
 			</p>
 			<div class="logo">
 				<!-- Backgroundimage via css -->
@@ -508,7 +517,7 @@
 			<div class="premiumEQ">
 				<h2>Premium EQ</h2>
 				<p class="premdescription">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
-  					your listening experience to a whole new level and access all our incredible features!
+					your listening experience to a whole new level and access all our incredible features!
 				</p>
 				<div class="price">
 					<p class="large">$4</p>
@@ -522,10 +531,8 @@
 		</main>
 
 		<footer>
-			
-			<p class="equalizer">equalizer</p>
-			<p class="disclaimertext">All rights reserved © Equalizer 2021 <br> Have any problems? Contact us via social media or email us at <strong>equalizer@example.com</strong></p>
-		
+			<img id="equalizerimgbottom" src="assets/logo.svg" alt="Logo der Marke equalizer">
+			<p class="disclaimertext">All rights reserved © Equalizer 2021 <br> Have any problems? Contact us via social media or email us at <strong>equalizer@example.com</strong></p>		
 			<div class="icons">
 				<img class="facebook" src="assets/icon-facebook.svg" alt="icon der Marke Facebook">
 				<img class="facebook" src="assets/icon-instagram.svg" alt="icon der Marke Instagram">
@@ -535,155 +542,5 @@
 		</footer>
 
 	</div>	
- 
-
-	
-	/* Get expert-level con */
-
-position: absolute;
-width: 333px;
-height: 170px;
-left: 788px;
-top: 1082px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 34px;
-/* or 170% */
-
-color: #FCFAF9;
-
-
-
-/* Get expert-level con */
-
-position: absolute;
-width: 302px;
-height: 140px;
-left: 320px;
-top: 1020px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-/* or 156% */
-
-color: #FCFAF9;
-
-/* Premium EQ */
-
-position: absolute;
-width: 302px;
-height: 40px;
-left: 320px;
-top: 968px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 40px;
-/* identical to box height, or 125% */
-
-color: #FCFAF9;
-
-
-
-
-
-/* Premium EQ */
-
-position: absolute;
-width: 333px;
-height: 52px;
-left: 788px;
-top: 1008px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 52px;
-/* identical to box height, or 130% */
-
-color: #FCFAF9;
-
-/* Get expert-level con */
-
-position: absolute;
-width: 302px;
-height: 140px;
-left: 320px;
-top: 1020px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-/* or 156% */
-
-color: #FCFAF9;
-
-
-
-
-
-
-
-/* We make your music s */
-
-position: absolute;
-width: 1015px;
-height: 176px;
-left: 165px;
-top: 221px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 88px;
-line-height: 88px;
-/* or 100% */
-letter-spacing: -1px;
-
-color: #191826;
-
-/* A system audio equal */
-
-position: absolute;
-width: 825px;
-height: 102px;
-left: 164.5px;
-top: 437px;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 34px;
-/* or 170% */
-
-color: #191826;
-
-/* All rights reserved */
-
-position: absolute;
-left: 0%;
-right: 47.41%;
-top: 44.76%;
-bottom: 0%;
-
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 26px;
-/* or 162% */
-
-color: #191826;
-
+</body>
+</html>
