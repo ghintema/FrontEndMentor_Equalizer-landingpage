@@ -47,7 +47,7 @@
 			margin-left:var(--white-space-left);
 			position:relative;
 		}
-		img#equalizerimgtop {
+		img#equalizertop {
 			width:146px;
 			margin-top:40px;
 			margin-bottom:76px;
@@ -102,7 +102,6 @@
 			border-radius:12px;
 			width: 375px;
 			height: 546px;
-/*			border:0px solid green;*/
 		}
 		div.premiumEQ > h2 {
 			padding:56px 0px 24px 36px;
@@ -194,11 +193,10 @@
 		}
 	
 		footer {
-			margin:var(--white-space-left);
+			margin:0px var(--white-space-left);
 		}
-		footer img#equalizerimgbottom {
-			background-color: red;
-			margin:26px 0px 76px;
+		img#equalizerbottom {
+			margin:64px 0px 32px;
 		}
 		p.disclaimertext {
 			width:327px;
@@ -208,6 +206,7 @@
 			font-size: 16px;
 			line-height: 26px;
 			color: #191826;
+			margin:0px;
 		}
 		.icons {
 			display:flex;
@@ -216,7 +215,6 @@
 			height:20px;
 			margin-top:62px;
 			margin-bottom:75px;
-			/* border:2px solid red; */
 		}
 
 		@media (min-width:762px) {
@@ -253,14 +251,11 @@
 				top:-32px;
 			}
 
-			img#equalizerimgtop{
+			img#equalizertop{
 				margin-top:62px;
 				margin-bottom:95px;
 			}
-			p.equalizertop {
-				margin-top:62px;
-				margin-bottom:93px;
-			}
+		
 			h1.slogan{
 				font-family: 'IBM Plex Sans';
 				font-style: normal;
@@ -332,28 +327,26 @@
 			height: 61px;
 			left:54px;	
 			}
+			
+			
 			footer {
-				display:flex;
-				flex-wrap:wrap;
-			}	
-
-			img#equalizerimgbottom{
+				margin-top:87px /* this margin counts to the red div.premiumEQ */
+			}
+			img#equalizerbottom{
 				width:146px;
 				margin:0px 0px 50px 0px;
 			}
-			p.equalizer {
-				width:100%;
-				margin:0px 0px 50px 0px
-			}
+			
 			p.disclaimertext{
 				width:366px;
 				height:auto;
 				padding:0px;
 				margin:0px;
+				
 			}
 			div.icons {
-				margin-top:40px;
-				margin-left:215px;
+				margin-top:-45px;
+				float:right;
 		
 		}
 
@@ -378,7 +371,7 @@
 				top:-32px;
 			}
 			
-			img#equalizerimgtop{
+			img#equalizertop{
 				margin-top:62px;
 				margin-bottom:140px;
 			
@@ -465,22 +458,12 @@
 			}
 			footer {
 				display:flex;
-				flex-wrap:wrap;
+				justify-content:space-between;
 			}	
-			img#equalizerimgbottom{
-				width:146px;
+			img#equalizerbottom{
+				align-self:flex-start;
 				margin:0px 0px 50px 0px;
-			}
-			p.equalizer {
-				width:146px;
-				margin:0px 0px 50px 0px
-			}
-			p.disclaimertext{
-				width:366px;
-				height:auto;
-				padding:0px;
-				margin:0px 148px 0px 135px;
-			}
+			}			
 			div.icons {
 				margin-top:40px;
 				margin-left:215px;
@@ -496,7 +479,7 @@
 		<div class="blur2"></div>
 		<div class="blur3"></div>
 		<header>
-			<img id="equalizerimgtop" src="assets/logo.svg" alt="Logo der Marke equalizer">
+			<img id="equalizertop" src="assets/logo.svg" alt="Logo der Marke equalizer">
 			<img class="logotop" alt="Logo der Marke equalizer oben rechts">
 			<h1 class="slogan" > We make your music sound extraordinary.</h1>
 			<p class="slgdescription">A system audio equalizer specifically designed for Android and iOS. Freely tune the 
@@ -531,7 +514,7 @@
 		</main>
 
 		<footer>
-			<img id="equalizerimgbottom" src="assets/logo.svg" alt="Logo der Marke equalizer">
+			<img id="equalizerbottom" src="assets/logo.svg" alt="Logo der Marke equalizer">
 			<p class="disclaimertext">All rights reserved © Equalizer 2021 <br> Have any problems? Contact us via social media or email us at <strong>equalizer@example.com</strong></p>		
 			<div class="icons">
 				<img class="facebook" src="assets/icon-facebook.svg" alt="icon der Marke Facebook">
